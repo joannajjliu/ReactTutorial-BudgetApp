@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+//provides store to ALL components making up application, without passing it around:
+import { Provider } from 'react-redux'; 
+
 import AppRouter from './routers/AppRouter';
 
 import configureStore from './store/configureStore';
@@ -20,19 +24,32 @@ store.subscribe(() => {
 
 const waterBill = store.dispatch(addExpense({
     description: "water bill",
-    amount: 200,
-    createdAt: 2000
+    amount: 4500
 }));
 
 const gasBill = store.dispatch(addExpense({
     description: "gas bill",
-    amount: 100,
-    createdAt: 5000
+    createdAt: 1000
 }));
 
-store.dispatch(setTextFilter('gas'));
+const rentBill = store.dispatch(addExpense({
+    description: "rent",
+    amount: 109500
+}));
 
-ReactDOM.render(<AppRouter />, document.getElementById("app"));
+// store.dispatch(setTextFilter('gas'));
+
+// setTimeout(() => {
+//     store.dispatch(setTextFilter('bill'));
+// }, 3000);
+
+const jsx = (
+    <Provider store={store}>
+        <AppRouter />
+    </Provider>
+);
+
+ReactDOM.render(jsx, document.getElementById("app"));
 
 // const demoState = {
 //     expense: [{
