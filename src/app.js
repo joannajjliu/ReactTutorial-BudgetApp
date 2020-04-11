@@ -22,20 +22,20 @@ store.subscribe(() => {
     console.log(visibleExpenses);
 });
 
-const waterBill = store.dispatch(addExpense({
-    description: "water bill",
-    amount: 4500
-}));
+// const waterBill = store.dispatch(addExpense({
+//     description: "water bill",
+//     amount: 4500
+// }));
 
-const gasBill = store.dispatch(addExpense({
-    description: "gas bill",
-    createdAt: 1000
-}));
+// const gasBill = store.dispatch(addExpense({
+//     description: "gas bill",
+//     createdAt: 1000
+// }));
 
-const rentBill = store.dispatch(addExpense({
-    description: "rent",
-    amount: 109500
-}));
+// const rentBill = store.dispatch(addExpense({
+//     description: "rent",
+//     amount: 109500
+// }));
 
 // store.dispatch(setTextFilter('gas'));
 
