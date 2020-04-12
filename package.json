@@ -26,6 +26,7 @@
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
+    "numeral": "^2.0.6",
     "react": "^16.13.1",
     "react-addons-shallow-compare": "^15.6.2",
     "react-dates": "^21.8.0",
@@ -40,7 +41,6 @@
     "validator": "^13.0.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
-    
   },
   "devDependencies": {
     "live-server": "^1.2.1",
